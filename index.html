@@ -1,0 +1,72 @@
+<html>
+
+<head>
+    <title>Math Quizapp</title>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100;300;400;500;700;900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+        integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="quiz.js"></script>
+</head>
+
+<body class="body-color" onload="start()">
+    <div class="progress">
+        <div id="progress-blue" class="progress-bar" role="progressbar" style="width: 10%" aria-valuenow="25"
+            aria-valuemin="0" aria-valuemax="100"></div>
+    </div>
+    <div class="container1">
+        <div class="nav-container">
+            <img class="nav-img" src="img/Quiz app 1.png" width="100" height="120">
+            <div class="bbtn"> <button class="btn btn-primary math-btn">
+                    MATH
+                </button></div>
+
+        </div>
+        <div class="img-down">
+            <img id="image-brain" src="img/brain bg1.png" width="800" height="600">
+            <div id="win-img" class="win">
+                <img class="brain-green" src="img/brain Score logo2.png" width="100" height="100">
+                <h3 class="h3-schrift"><b>COMPLETE QUIZ</b></h3>
+                <h3 class="score"><b>YOUR SCORE</b></h3>
+                <div class="score-display" id="score"></div>
+                <button class="share">SHARE</button>
+                <button class="replay" onclick=startAgain()>REPLAY</button>
+            </div>
+
+            <p id="welcome" class="img-down-welcome"><b>Welcome to <br>the awesome Math Quiz</b><br>
+            <p id="ready" class="ready d-none">Ready for the Challenge?</p>
+            </p>
+
+            <button onclick="startGame()" id="start-btn" class="orange">START</button>
+
+            <div class="questions" id="question">
+
+            </div>
+            <div id="answer" class="buttons">
+                <button id="answer_1" onclick="answer(1)" class="btn-answer right false display-white"></button>
+                <button id="answer_2" onclick="answer(2)" class="btn-answer right false display-white"></button>
+                <button id="answer_3" onclick="answer(3)" class="btn-answer right false display-white"></button>
+                <button id="answer_4" onclick="answer(4)" class="btn-answer right false display-white"></button>
+                <div id="answer_right"></div>
+                <div id="answer_false"></div>
+            </div>
+
+            <div class="back-next-btns">
+                <div id="back-btn" onclick="back()" class="btnleft">
+                    <div id="back-btn" class=" left-arrow r-l"></div>
+                </div>
+                <div id="next-btn" onclick="next()" class=" btnright">
+                    <div id="next-btn" class=" right-arrow r-a"></div>
+                </div>
+            </div>
+            <div id="righta" class="right d-none"></div>
+            <div id="falsea" class="false d-none"></div>
+        </div>
+
+
+</body>
+
+</html>
